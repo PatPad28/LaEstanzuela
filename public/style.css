@@ -1,43 +1,99 @@
-body {
+/* Reset & base styles */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background-color: #ffffff;
+}
+
+/* NAVBAR */
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #222;
-    color: white;
-    padding: 1rem 2rem;
+    justify-content: space-between;
+    background-color: #0b2b66; /* Dark Blue */
+    padding: 0.8rem 2rem;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
 
-.navbar .logo {
-    font-size: 1.5rem;
+.logo-img {
+    height: 60px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
-    margin: 0;
+    gap: 1.8rem;
 }
 
-.nav-links a {
+.nav-links li a {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: #00bcd4;
+.nav-links li a:hover {
+    color: #e0dede;
 }
 
+.nav-links li a.active {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* HERO SECTION */
 .hero {
-    padding: 10rem 2rem 2rem;
+    height: 100vh;
+    background: url('public/FondoMainLaEstanzuela.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 0 1rem;
+    padding-top: 6rem; /* Space for navbar */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-buttons a {
+    background-color: #0b2b66;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-buttons a:hover {
+    background-color: #174bab;
 }
